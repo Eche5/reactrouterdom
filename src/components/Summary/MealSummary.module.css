@@ -1,0 +1,19 @@
+/* .container{
+  background-image: url('../assests/intro-1654286969.webp');
+  background-size: cover;
+  height: 110vh;
+
+} */
+.container {
+  width: 100%;
+  height: 25rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.container img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-4deg) translateY(-4rem) translateX(-1rem);
+}

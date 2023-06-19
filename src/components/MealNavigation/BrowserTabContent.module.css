@@ -1,0 +1,21 @@
+/* BrowserTabContent.css */
+.tab-transition-enter {
+  opacity: 0;
+}
+
+.tab-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.tab-transition-exit {
+  opacity: 1;
+}
+
+.tab-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+/* BrowserTabNavigation.css */
+/* Add any necessary styles for the BrowserTabNavigation component */
