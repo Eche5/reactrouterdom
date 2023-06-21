@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { cartItemAction } from "../store/cart-item";
 export default function MainCourseMeals(props) {
   const dispatch = useDispatch();
-      const { title, price, id } = props;
+  const { title, price, id } = props;
 
   const addItemtoCart = () => {
     dispatch(
@@ -22,8 +22,8 @@ export default function MainCourseMeals(props) {
       <div>
         <h3>{props.title}</h3>
       </div>
-      <div className={classes.price}>₦{props.price}</div>
-      <div>
+      <div className={classes.pricelist}>
+        <div className={classes.price}>₦{props.price}</div>
         <button onClick={addItemtoCart}>+add</button>
       </div>
     </li>

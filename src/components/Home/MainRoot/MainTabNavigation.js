@@ -3,7 +3,7 @@ import { Tabs, TabList, Tab } from "react-tabs";
 import { NavLink } from "react-router-dom";
 import styles from "./BrowserTabNavigation.module.css";
 
-const BrowserTabNavigation = () => {
+const MainTabNavigation = () => {
   return (
     <Tabs className={styles.mainTab}>
       <TabList className={styles.list}>
@@ -27,4 +27,4 @@ const BrowserTabNavigation = () => {
   );
 };
 
-export default BrowserTabNavigation;
+export default MainTabNavigation;

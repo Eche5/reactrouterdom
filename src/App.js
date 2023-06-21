@@ -9,7 +9,8 @@ import Error from "./components/Error";
 import MainCourseRice, {
   loader as SupplementaryMealLoader,
 } from "./components/Home/MainCourseRice";
-import {action} from './components/Cart/Cart'
+import { action } from "./components/Cart/Cart";
+import MainRoot from './components/MainRoot'
 function App() {
   const router = createBrowserRouter([
     {
@@ -34,6 +35,12 @@ function App() {
               element: <Supplementary />,
               loader: supplementaryLoader,
             },
+          ],
+        },
+        {
+          path: "/",
+          element: <MainRoot />,
+          children: [
             {
               path: "/rice",
               element: <MainCourseRice />,

@@ -23,7 +23,8 @@
   font-weight: bold;
   color: #ad5502;
   font-size: 1.25rem;
-  margin-right: 1rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
 }
 .list button {
   font: inherit;

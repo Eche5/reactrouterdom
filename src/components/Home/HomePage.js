@@ -1,11 +1,12 @@
 import React from "react";
 import MainCourseList from "./MainCourseList";
+import styles from "./HomePage.module.css"
 import { useLoaderData, json } from "react-router-dom";
 export default function HomePage() {
   const food = useLoaderData();
 
   return (
-    <div>
+    <div className={styles.homepage}>
       <ul>
         {food.map((maincourse) => {
           return (

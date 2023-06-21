@@ -1,11 +1,11 @@
 import React from "react";
 import SupplementaryList from "./SupplementaryList";
 import { json, useLoaderData } from "react-router-dom";
-
+import styles from "./Supplementary.module.css"
 export default function Supplementary() {
   const loadedFood = useLoaderData()
   return (
-    <div>
+    <div className={styles.Supplementary}>
       <ul>
         {loadedFood.map((summary) => {
           return (

@@ -1,19 +1,18 @@
 import React from "react";
 import { TabPanel } from "react-tabs";
-import HomePage from "../Home/HomePage";
-import Supplementary from "../Supplementary/Supplementary";
 import classes from './BrowserTabContent.module.css'
-const BrowserTabContent = () => {
+import MainCourseMeals from "../MainCourseMeals";
+const MainTabContent = () => {
   return (
     <div className={classes.tabpanel}>
       <TabPanel className={classes.homepage}>
-        <HomePage />
+        <MainCourseMeals />
       </TabPanel>
       <TabPanel className={classes.supplementary}>
-        <Supplementary />
+        <supplementary />
       </TabPanel>
     </div>
   );
 };
 
-export default BrowserTabContent;
+export default MainTabContent;
