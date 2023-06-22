@@ -28,7 +28,7 @@ export default function Cart() {
         <>
           {cartItems.length === 0 && <h2>Your Cart is Empty</h2>}
           {cartItems.length > 0 && <h2>Your Shopping Cart</h2>}
-          <ul>
+          <ul className={classes["cart-items"]}>
             {cartItems.map((item) => {
               return (
                 <CartItem

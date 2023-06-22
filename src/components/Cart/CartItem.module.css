@@ -25,6 +25,9 @@
 .quantity span {
   font-size: 1.5rem;
   font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
 }
 
 .price {
@@ -40,8 +43,8 @@
 
 .actions {
   display: flex;
-  justify-content: flex-end;
-  margin: 0.5rem 0;
+   flex-direction: column;
+
 }
 
 .actions button {
@@ -89,4 +92,9 @@
 
 .button button:last-child:hover {
   background-color: #228b22;
+}
+@media (min-width: 768px) {
+  .actions {
+    flex-direction: row;
+  }
 }
