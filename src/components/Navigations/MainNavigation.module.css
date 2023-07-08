@@ -13,16 +13,27 @@
 }
 
 .header h1 {
+  font-family: "Megrim", sans-serif;
+  font-size: 3rem;
   color: white;
+  transform: skewY(-5deg);
+  text-align: center;
+  position: relative;
+  word-spacing: 3px;
+}
+.header h1:hover{
+  font-size: 3.3rem;
 }
 
 .header ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  
 }
-.header a{
-      text-decoration: none;
-
+.header a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../../fonts/Megrim-Regular.ttf') format('truetype'); /* Adjust the path and font format accordingly */
 }

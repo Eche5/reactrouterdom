@@ -12,7 +12,9 @@ export default function MainNavigation() {
     <>
       {showCart && <Cart />}
       <div className={classes.header}>
-        <Link to="/"><h1>JOCINE</h1></Link>
+        <Link to="/">
+          <h1 style={{ fontFamily: "CustomFont" }}>JOCINE</h1>
+        </Link>
         <nav>
           <ul>
             <li>

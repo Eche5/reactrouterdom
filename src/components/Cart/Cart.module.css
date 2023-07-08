@@ -35,6 +35,32 @@
   background-color: #32cd32;
   color: #fff;
 }
+.close {
+  background-color: #ff4136;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: #f8645c;
+}
+.order {
+  background-color: #32cd32;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.order:hover{
+    background-color: #109810;
+
+}
 
 .button button:last-child:hover {
   background-color: #228b22;

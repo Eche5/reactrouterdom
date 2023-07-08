@@ -5,7 +5,9 @@ import classes from "./Cart.module.css";
 import { useDispatch } from "react-redux";
 import { cartAction } from "../store/cart";
 import { useSelector } from "react-redux";
-import { Form, json,redirect } from "react-router-dom";
+import { json,redirect } from "react-router-dom";
+import { Formik, Field, Form } from "formik";
+
 export default function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cartItem.items);
@@ -50,20 +52,28 @@ export default function Cart() {
         </>
       )}
       {showOrder && (
-        <Form method="post">
-          <div>
-            <label htmlFor="name">Name </label>
-            <input id="name" type="text" name="name" required />
-          </div>
-          <div>
-            <label htmlFor="address">Address </label>
-            <input id="address" type="text" name="address" required />
-          </div>
-          <div>
-            <button onClick={closeOrderHandler}>Cancel Order</button>
-            <button>Place Order</button>
-          </div>
-        </Form>
+        <Formik
+          initialValues={{ name: "", email: "" }}
+          onSubmit={async (values) => {
+            await new Promise((resolve) => setTimeout(resolve, 500));
+            alert(JSON.stringify(values, null, 2));
+          }}
+        >
+          <Form>
+            <Field name="name" type="text" />
+            <Field name="email" type="email" />
+            <button
+              className={classes.close}
+              type="submit"
+              onClick={closeOrderHandler}
+            >
+              Close
+            </button>
+            <button className={classes.order} type="submit">
+              Order
+            </button>
+          </Form>
+        </Formik>
       )}
     </Modal>
   );
