@@ -60,8 +60,14 @@ export default function Cart() {
           }}
         >
           <Form>
-            <Field name="name" type="text" />
-            <Field name="email" type="email" />
+            <div>
+              <label htmlFor="name">Name:</label>
+              <Field id="name" name="name" type="text" />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <Field id="email" name="email" type="email" />
+            </div>
             <button
               className={classes.close}
               type="submit"
