@@ -21,8 +21,10 @@
   position: relative;
   word-spacing: 3px;
 }
-.header h1:hover{
-  font-size: 3.3rem;
+.header h1:hover {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  scale: 1.05;
 }
 
 .header ul {
@@ -34,6 +36,9 @@
   text-decoration: none;
 }
 @font-face {
-  font-family: 'CustomFont';
-  src: url('../../fonts/Megrim-Regular.ttf') format('truetype'); /* Adjust the path and font format accordingly */
+  font-family: "CustomFont";
+  src: url("../../fonts/Megrim-Regular.ttf") format("truetype"); /* Adjust the path and font format accordingly */
+}
+.jocine {
+  color: l;
 }

@@ -23,6 +23,7 @@ export async function loader() {
   if (!response.ok) {
     return json({ message: "Could not fetch main meals" }, { status: 404 });
   }
+  
   const data = await response.json();
   const loadedMeal = [];
   for (const key in data) {

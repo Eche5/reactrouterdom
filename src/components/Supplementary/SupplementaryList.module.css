@@ -1,7 +1,7 @@
 .list {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
+  margin: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 }
@@ -10,12 +10,14 @@
   margin: 0 0 0.25rem 0;
 }
 .list:hover {
-  padding: 0.1rem;
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  scale: 1.03;
   border-bottom: 2px solid;
 }
 .description {
   font-style: italic;
 }
-.list a{
-    text-decoration: none;
+.list a {
+  text-decoration: none;
 }
