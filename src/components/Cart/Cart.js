@@ -59,30 +59,42 @@ export default function Cart() {
         </>
       )}
       {showOrder && !isOrdered && (
-        <form onSubmit={submitOrderHandler}>
-          <div>
-            <label htmlFor="name">Name: </label>
-            <input id="name" name="name" type="text" />
+        <form onSubmit={submitOrderHandler} className={classes.form}>
+          <div className={classes.formGroup}>
+            <label htmlFor="name" className={classes.label}>
+              Name:
+            </label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              className={classes.input}
+              required // Add 'required' for form validation
+            />
           </div>
-          <div>
-            <label htmlFor="email">Email: </label>
-            <input id="email" name="email" type="email" />
+          <div className={classes.formGroup}>
+            <label htmlFor="email" className={classes.label}>
+              Email:
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              className={classes.input}
+              required
+            />
           </div>
-          <button
-            className={classes.close}
-            type="submit"
-            onClick={closeOrderHandler}
-          >
-            Close
-          </button>
-          <button className={classes.order} type="submit">
-            Order
-          </button>
+          <div className={classes.button}>
+            <button type="button" onClick={closeOrderHandler}>
+              Close
+            </button>
+            <button type="submit">Order</button>
+          </div>
         </form>
       )}
       {isOrdered && showOrder && (
         <>
-          <h1>Your Order has been made, you will be contacted shortly</h1>
+          <h1>Your Order has been placed, you will be contacted shortly</h1>
           <button
             className={classes.close}
             type="submit"
